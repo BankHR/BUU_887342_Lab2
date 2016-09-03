@@ -16,7 +16,14 @@ public class Rec {
       sumDigits(345) = 12.
       Precondition: n >= 0. */
     public static int sumDigits(int n) {
-	
+	if(n<1) return 0;
+
+	int t = 0;
+	while(true) {
+		if(n<1) return t;
+		t = t+(n%10);
+		n = n/10;
+	}
 	// fill me in
 	
     }
@@ -32,7 +39,10 @@ public class Rec {
     /** = a copy of s with characters in reverse order.
 		Example: reverse("abcdefg") = "gfedcba". */
 	public static String reverse(String s) {
-	
+		String k = "";
+		for(int i=s.length()-1;i>0;i--) 
+			k+=s.charAt(i);
+		return k;
 	// fill me in
 	
 	}
