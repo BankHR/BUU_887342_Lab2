@@ -7,8 +7,16 @@ public class Rec {
 		Precondition: n >= 0. */
     public static int numDigits(int n) {
 	
-	// fill me in
-	
+    	if(n<1) return 0;
+    	int count = 0;
+    	while(true){
+    	    n = n/10 ;
+    		count++;
+    		if(n==0){
+    			break;
+    		}
+    	}
+    	return count;	
     }
 
     /** = sum of the digits in the decimal representation of n.
